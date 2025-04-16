@@ -22,26 +22,24 @@ def jogos_loterica(escolha):
             numero = randint(1,80)
             if numero not in numeros_escolhidos:
                 numeros_escolhidos.append(numero)
-    else:
-        print("1 - Mega Sena")
-        print("2 - Loto Fácil")
-        print("3 - Quina")
-        escolha = int(input("Escolha o número do jogo que deseja jogar: "))
     return sorted(numeros_escolhidos)
+
+def multiplicador_jogos(quantidade_jogos):
+    cont = 0
+    while quantidade_jogos >= 1:
+        cont += 1
+        print(f"Jogo {cont} | {jogos_loterica(menu_escolha)}")
+        quantidade_jogos -= 1
 
 print("1 - Mega Sena")
 print("2 - Loto Fácil")
 print("3 - Quina")
-menu_escolha = input("Escolha o número do jogo que deseja jogar: ")
-if 0 > menu_escolha > 4 or menu_escolha is not int:
-    menu_escolha = input("Escolha o número do jogo que deseja jogar: ")
-numero_jogos = input("Quandos jogos deseja fazer? ")
-if 0 > menu_escolha or menu_escolha is not int:
-    numero_jogos = input("Quandos jogos deseja fazer? ")
-
-if numero_jogos >= 1:
-    cont = 0
-    while numero_jogos >= 1:
-        cont += 1
-        print(f"Jogo {cont} | {jogos_loterica(menu_escolha)}")
-        numero_jogos -= 1
+#print("4 - Sair")
+menu_escolha = int(input("Escolha o número do jogo que deseja jogar: "))
+while 0 > menu_escolha or menu_escolha > 4:
+    menu_escolha = int(input("Escolha o número do jogo que deseja jogar: "))
+jogos_loterica(menu_escolha)
+numero_jogos = int(input("Quandos jogos deseja fazer? "))
+while 1 > numero_jogos:
+    numero_jogos = int(input("Quandos jogos deseja fazer? "))
+multiplicador_jogos(numero_jogos)
