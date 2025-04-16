@@ -27,17 +27,21 @@ def jogos_loterica(escolha):
         print("2 - Loto Fácil")
         print("3 - Quina")
         escolha = int(input("Escolha o número do jogo que deseja jogar: "))
-    return numeros_escolhidos
+    return sorted(numeros_escolhidos)
 
 print("1 - Mega Sena")
 print("2 - Loto Fácil")
 print("3 - Quina")
-menu_escolha = int(input("Escolha o número do jogo que deseja jogar: "))
-numero_jogos = int(input("Quandos jogos deseja fazer? "))
+menu_escolha = input("Escolha o número do jogo que deseja jogar: ")
+if 0 > menu_escolha > 4 or menu_escolha is not int:
+    menu_escolha = input("Escolha o número do jogo que deseja jogar: ")
+numero_jogos = input("Quandos jogos deseja fazer? ")
+if 0 > menu_escolha or menu_escolha is not int:
+    numero_jogos = input("Quandos jogos deseja fazer? ")
 
 if numero_jogos >= 1:
     cont = 0
     while numero_jogos >= 1:
         cont += 1
-        print(f"Jogo {cont} | {sorted(jogos_loterica(menu_escolha))}")
+        print(f"Jogo {cont} | {jogos_loterica(menu_escolha)}")
         numero_jogos -= 1
