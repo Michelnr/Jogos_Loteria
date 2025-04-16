@@ -23,15 +23,15 @@ def jogos_loterica(escolha):
             if numero not in numeros_escolhidos:
                 numeros_escolhidos.append(numero)
     else:
-        print(f"1 - Mega Sena")
-        print(f"2 - Loto Fácil")
-        print(f"3 - Quina")
+        print("1 - Mega Sena")
+        print("2 - Loto Fácil")
+        print("3 - Quina")
         escolha = int(input("Escolha o número do jogo que deseja jogar: "))
     return numeros_escolhidos
 
-print(f"1 - Mega Sena")
-print(f"2 - Loto Fácil")
-print(f"3 - Quina")
+print("1 - Mega Sena")
+print("2 - Loto Fácil")
+print("3 - Quina")
 menu_escolha = int(input("Escolha o número do jogo que deseja jogar: "))
 numero_jogos = int(input("Quandos jogos deseja fazer? "))
 
