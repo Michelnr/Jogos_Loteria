@@ -1,8 +1,6 @@
 # Programa criado para criar numeras aleatorios para jogar nos jogos da loteria federal.
-
-from random import randint
-
 def jogos_loterica(escolha):
+    from random import randint
     numeros_escolhidos = []
     # Números para Mega Sena.
     if escolha == 1:
