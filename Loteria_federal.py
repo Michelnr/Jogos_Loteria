@@ -29,9 +29,10 @@ def jogos_loterica(escolha):
 
 def multiplicador_jogos(quantidade_jogos):
     cont = 0
-    while quantidade_jogos >= 1:
+    while quantidade_jogos >= cont:
+        numeros = jogos_loterica(menu_escolha)
         cont += 1
-        print(f"Jogo {cont} | {jogos_loterica(menu_escolha)}")
+        print(f"Jogo {cont} | {numeros}")
         quantidade_jogos -= 1
 
 print("1 - Mega Sena")
@@ -52,7 +53,7 @@ while menu_escolha != 4:
     
     numero_jogos = int(input("Quandos jogos deseja fazer? "))
 
-    while numero_jogos != int():
+    while numero_jogos == int():
         print('Escolha invalida, informe um número inteiro!')
         numero_jogos = int(input("Quandos jogos deseja fazer? "))
     multiplicador_jogos(numero_jogos)
