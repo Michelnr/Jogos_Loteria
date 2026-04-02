@@ -28,7 +28,7 @@ def jogos_loterica(escolha):
     
     return sorted(numeros_escolhidos)
 
-def multiplicador_jogos(quantidade_jogos):
+def multiplica_jogos(quantidade_jogos):
     cont = 0
     while quantidade_jogos > cont:
         numeros = jogos_loterica(menu_escolha)
@@ -42,7 +42,7 @@ while True:
     print("2 - Loto Fácil")
     print("3 - Quina")
     print("4 - Sair")
-    
+
     menu_escolha = int(input("Escolha o número do jogo que deseja jogar: "))
     
     if menu_escolha == 4:
@@ -59,4 +59,4 @@ while True:
         continue
 
     
-    multiplicador_jogos(numero_jogos)
+    multiplica_jogos(numero_jogos)
