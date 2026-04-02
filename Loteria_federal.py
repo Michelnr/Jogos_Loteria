@@ -1,4 +1,5 @@
 # Programa criado para criar numeras aleatorios para jogar nos jogos da loteria federal.
+
 def jogos_loterica(escolha):
     from random import randint
     
@@ -29,31 +30,33 @@ def jogos_loterica(escolha):
 
 def multiplicador_jogos(quantidade_jogos):
     cont = 0
-    while quantidade_jogos >= cont:
+    while quantidade_jogos > cont:
         numeros = jogos_loterica(menu_escolha)
         cont += 1
         print(f"Jogo {cont} | {numeros}")
-        quantidade_jogos -= 1
+    print(40*'-')
 
-print("1 - Mega Sena")
-print("2 - Loto Fácil")
-print("3 - Quina")
-print("4 - Sair")
 
-menu_escolha = int(input("Escolha o número do jogo que deseja jogar: "))
-
-while menu_escolha != 4:
-    while 1 > menu_escolha > 4:
-        print('Escolha invalida!!!')
-        print("1 - Mega Sena")
-        print("2 - Loto Fácil")
-        print("3 - Quina")
-        print("4 - Sair")
-        menu_escolha = int(input("Escolha o número do jogo que deseja jogar: "))
+while True:
+    print("1 - Mega Sena")
+    print("2 - Loto Fácil")
+    print("3 - Quina")
+    print("4 - Sair")
     
+    menu_escolha = int(input("Escolha o número do jogo que deseja jogar: "))
+    
+    if menu_escolha == 4:
+        break
+
+    if 1 > menu_escolha > 4:
+        print('Escolha invalida, escolha entre 1 e 4!!!')
+        continue
+
     numero_jogos = int(input("Quandos jogos deseja fazer? "))
 
-    while numero_jogos == int():
-        print('Escolha invalida, informe um número inteiro!')
-        numero_jogos = int(input("Quandos jogos deseja fazer? "))
+    if type(numero_jogos) != int:
+        print('NUMERO INVALIDO, Por favor, informa um numero inteiro!')
+        continue
+
+    
     multiplicador_jogos(numero_jogos)

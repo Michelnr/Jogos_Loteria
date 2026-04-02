@@ -45,3 +45,6 @@ logs/
 *.swp
 *.tmp
 .cache/
+
+# Arquivos de teste
+teste.py
